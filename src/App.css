@@ -927,9 +927,7 @@ grid-template-columns:1fr;
   border-color:#FFD700;
 }
 
-.contact-form button{
-  background:#FFD700;
-  co.contact-form input,
+.contact-form input,
 .contact-form textarea{
   background:#222;
   color:#fff;
@@ -943,7 +941,22 @@ grid-template-columns:1fr;
   text-align: right;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:#FFD700;
+}
 
+.contact-form button{
+  background:#FFD700;
+  color:#000;
+  border:none;
+  border-radius:10px;
+  padding:18px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
 
 .contact-form button:hover{
   background:#ffcc00;
@@ -1145,7 +1158,13 @@ grid-template-columns:1fr;
     }
 
     to{
-   .hero-content{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero-content{
     text-align:center;
     z-index:10;
 
@@ -1170,155 +1189,7 @@ grid-template-columns:1fr;
     inset:0;
     background:rgba(0,0,0,.35);
 }
-     opacity:1;
-        transform:translateY(0);
-    }
 
-}
-.contact-form input::placeholder,
-.contact-form textarea::placeholder{
-    text-align:right;
-    direction:rtl;
-}
-}
-.contact-form{
-    direction:rtl;
-    text-align:right;
-}
-
-.contact-form input,
-.contact-form textarea{
-    direction:rtl;
-    text-align:right;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder{
-    text-align:right;
-    direction:rtl;
-}
-.export-steps{
-  display:flex;
-  gap:25px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.export-step{
-  background:#222;
-  border:2px solid #FFD700;
-  border-radius:15px;
-  padding:30px;
-  width:250px;
-  text-align:center;
-  transition:.3s;
-}
-
-.export-step:hover{
-  transform:translateY(-8px);
-}
-/* مراحل همکاری صادرات */
-
-.export-steps{
-  text-align:center;
-  margin-top:60px;
-}
-
-.steps{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  flex-wrap:wrap;
-  margin-top:30px;
-}
-
-.step{
-  width:220px;
-  background:#222;
-  border:2px solid #FFD700;
-  border-radius:15px;
-  padding:30px 20px;
-  text-align:center;
-  transition:.3s;
-}
-
-.step span{
-  display:block;
-  width:45px;
-  height:45px;
-  line-height:45px;
-  margin:0 auto 15px;
-  background:#FFD700;
-  color:#000;
-  border-radius:50%;
-  font-size:22px;
-  font-weight:bold;
-}
-
-.step:hover{
-  transform:translateY(-8px);
-}
-/* Mobile Responsive */
-
-@media (max-width:768px){
-
-  .hero h1{
-    font-size:35px;
-  }
-
-  .hero p{
-    font-size:18px;
-    line-height:35px;
-    padding:0 20px;
-  }
-
-  .steps{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .step{
-    width:85%;
-  }
-
-  .export-services{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .service-card{
-    width:85%;
-  }
-
-  .export-form form{
-    width:90%;
-    margin:auto;
-  }
-
-}
-.success-message{
-  margin-top:20px;
-  background:#22c55e;
-  color:#fff;
-  padding:18px;
-  border-radius:12px;
-  text-align:center;
-  font-size:18px;
-  font-weight:bold;
-  animation:fadeSuccess .4s;
-}
-
-@keyframes fadeSuccess{
-  from{
-    opacity:0;
-    transform:translateY(10px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
 /* ========================= */
 /* Achievements */
 /* ========================= */

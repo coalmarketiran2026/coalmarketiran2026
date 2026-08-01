@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 
 function Hero() {
 
+  // در اینجا اسلش اول حذف شد تا با GitHub Pages سازگار شود
   const images = [
-    "/images/hero1.jpg",
-    "/images/hero2.jpg",
-    "/images/hero3.jpg",
+    "images/hero1.jpg",
+    "images/hero2.jpg",
+    "images/hero3.jpg",
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -59,24 +60,19 @@ function Hero() {
       </div>
 
       <div className="hero-content">
-
         <h1>خرید، فروش و صادرات زغال‌سنگ</h1>
-
         <p>
           تأمین مستقیم انواع زغال‌سنگ حرارتی، کک‌شو، آنتراسیت و زغال صنعتی
         </p>
 
         <a
-  
-  className="hero-btn"
-  href="https://wa.me/989109684300?text=سلام، درخواست استعلام قیمت زغال‌سنگ دارم."
-  target="_blank"
-  rel="noreferrer"
->
-  📞 استعلام قیمت
-</a>
-
-بعد حتماً:
+          className="hero-btn"
+          href="https://wa.me/989109684300?text=سلام، درخواست استعلام قیمت زغال‌سنگ دارم."
+          target="_blank"
+          rel="noreferrer"
+        >
+          📞 استعلام قیمت
+        </a>
 
         <a
           className="whatsapp"
@@ -84,11 +80,9 @@ function Hero() {
           target="_blank"
           rel="noreferrer"
         >
-     💬 ارتباط مستقیم در واتساپ
+          💬 ارتباط مستقیم در واتساپ
         </a>
-
       </div>
-
     </header>
   );
 }

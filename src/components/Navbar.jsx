@@ -3,27 +3,21 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
-
       <div className="logo">
-        <img
-  src="/images/coalmarket-logo.png"
-  alt="CoalMarket Iran"
-/>
+                <img
+          src={`${import.meta.env.BASE_URL}images/coalmarket-logo.png`}
+          alt="CoalMarket Iran"
+        />
+
 
         <div className="logo-text">
-
-  <h2>CoalMarket Iran</h2>
-
-  <span>
-    Premium Coal Supplier & Exporter
-  </span>
-
-</div>
+          <h2>CoalMarket Iran</h2>
+          <span>Premium Coal Supplier & Exporter</span>
+        </div>
       </div>
 
       <div
@@ -34,7 +28,6 @@ function Navbar() {
       </div>
 
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
-
         <li>
           <NavLink to="/" onClick={() => setMenuOpen(false)}>
             خانه
@@ -66,21 +59,17 @@ function Navbar() {
         </li>
 
         <li>
-          <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
-          <li>
-  <NavLink
-    to="/encyclopedia"
-    onClick={() => setMenuOpen(false)}
-  >
-    دانشنامه
-  </NavLink>
-</li>
-            تماس با ما
+          <NavLink to="/encyclopedia" onClick={() => setMenuOpen(false)}>
+            دانشنامه
           </NavLink>
         </li>
 
+        <li>
+          <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+            تماس با ما
+          </NavLink>
+        </li>
       </ul>
-
     </nav>
   );
 }

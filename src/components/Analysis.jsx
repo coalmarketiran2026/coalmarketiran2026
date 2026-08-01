@@ -25,26 +25,23 @@ function Analysis() {
       calorie: "8200 kcal",
     },
   ];
-const analysisImages = [
-  "/images/analysis1.png",
-  "/images/analysis2.png",
-  "/images/analysis3.png",
-  "/images/analysis4.png",
-];
+
+  const analysisImages = [
+    `${import.meta.env.BASE_URL}images/analysis1.png`,
+    `${import.meta.env.BASE_URL}images/analysis2.png`,
+    `${import.meta.env.BASE_URL}images/analysis3.png`,
+    `${import.meta.env.BASE_URL}images/analysis4.png`,
+  ];
 
   return (
     <section className="analysis">
-
-      <h1>آنالیز آزمایشگاهی زغال‌سنگ</h1>
+      <h1 className="section-title">آنالیز آزمایشگاهی زغال‌سنگ</h1>
 
       <p className="analysis-text">
-تمامی محصولات CoalMarket Iran قبل از عرضه در آزمایشگاه‌های معتبر
-مورد آزمایش قرار می‌گیرند و همراه با برگه آنالیز رسمی، جهت
-اطمینان از کیفیت محصول، در اختیار مشتریان قرار می‌گیرند.
-</p>
+        تمامی محصولات CoalMarket Iran قبل از عرضه در آزمایشگاه‌های معتبر مورد آزمایش قرار می‌گیرند و همراه با برگه آنالیز رسمی، جهت اطمینان از کیفیت محصول، در اختیار مشتریان قرار می‌گیرند.
+      </p>
 
       <table>
-
         <thead>
           <tr>
             <th>محصول</th>
@@ -55,7 +52,6 @@ const analysisImages = [
             <th>ارزش حرارتی</th>
           </tr>
         </thead>
-
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
@@ -68,51 +64,29 @@ const analysisImages = [
             </tr>
           ))}
         </tbody>
-
       </table>
 
       <div className="analysis-box">
-
         <h3>ویژگی‌های آنالیز</h3>
-
         <ul>
           <li>✅ درصد خاکستر (Ash)</li>
           <li>✅ درصد گوگرد (Sulfur)</li>
           <li>✅ درصد رطوبت (Moisture)</li>
           <li>✅ کربن ثابت (Fixed Carbon)</li>
-          <li>✅ مواد فرار (Volatile Matter)</li>
           <li>✅ ارزش حرارتی (Calorific Value)</li>
-          <li>✅ خاکستر (Ash)</li>
-<li>✅ شاخص تورم (CSN) در صورت نیاز</li>
         </ul>
-
       </div>
 
-      <div className="analysis-buttons">
-
-        <button>
-📄 دانلود نمونه آنالیز PDF
-</button>
-
-<button>
-📊 درخواست آنالیز اختصاصی
-</button>
-
-      </div><div className="analysis-gallery">
-
-  <h2>نمونه برگه‌های آنالیز</h2>
-
-  <div className="gallery-grid">
-    {analysisImages.map((image, index) => (
-      <div className="analysis-card" key={index}>
-        <img src={image} alt={`Analysis ${index + 1}`} />
+      <div className="analysis-gallery">
+        <h2 className="section-title">نمونه برگه‌های آنالیز</h2>
+        <div className="gallery-grid">
+          {analysisImages.map((image, index) => (
+            <div className="analysis-card" key={index}>
+              <img src={image} alt={`Analysis ${index + 1}`} />
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-
-</div>
-
-
     </section>
   );
 }

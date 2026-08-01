@@ -17,7 +17,7 @@ AOS.init({
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/coalmarketiran2026">
       <App />
     </BrowserRouter>
   </StrictMode>
