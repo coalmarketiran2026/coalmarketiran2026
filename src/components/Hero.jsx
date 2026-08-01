@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 function Hero() {
 
   // در اینجا اسلش اول حذف شد تا با GitHub Pages سازگار شود
-  const images = [
-    "images/hero1.jpg",
-    "images/hero2.jpg",
-    "images/hero3.jpg",
-  ];
+  // بخش مربوط به تصاویر هیرو را به این شکل اصلاح کن:
+const heroImages = [
+  `${import.meta.env.BASE_URL}images/hero1.jpg`,
+  `${import.meta.env.BASE_URL}images/hero2.jpg`,
+  `${import.meta.env.BASE_URL}images/hero3.jpg`,
+];
+
 
   const [currentImage, setCurrentImage] = useState(0);
 

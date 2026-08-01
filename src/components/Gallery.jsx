@@ -4,14 +4,16 @@ function Gallery() {
   // در Vite، فایل‌های داخل پوشه public مستقیماً از ریشه (/) در دسترس هستند
   // پس نیازی به اضافه کردن baseUrl به ابتدای مسیر نیست، اگر فایل‌ها در public/images باشند.
   
-  const images = [
-    `images/gallery1.jpg`,
-    `images/gallery2.jpg`,
-    `images/gallery3.jpg`,
-    `images/gallery4.jpg`,
-    `images/gallery5.jpg`,
-    `images/gallery6.jpg`,
-  ];
+  // بخش مربوط به آرایه تصاویر را به این شکل اصلاح کن:
+const images = [
+  `${import.meta.env.BASE_URL}images/gallery1.jpg`,
+  `${import.meta.env.BASE_URL}images/gallery2.jpg`,
+  `${import.meta.env.BASE_URL}images/gallery3.jpg`,
+  `${import.meta.env.BASE_URL}images/gallery4.jpg`,
+  `${import.meta.env.BASE_URL}images/gallery5.jpg`,
+  `${import.meta.env.BASE_URL}images/gallery6.jpg`,
+];
+
 
   const [selectedImage, setSelectedImage] = useState(null);
 
