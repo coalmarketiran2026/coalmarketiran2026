@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 
 function Hero() {
-
-  // در اینجا اسلش اول حذف شد تا با GitHub Pages سازگار شود
-  // بخش مربوط به تصاویر هیرو را به این شکل اصلاح کن:
-const heroImages = [
-  `${import.meta.env.BASE_URL}images/hero1.jpg`,
-  `${import.meta.env.BASE_URL}images/hero2.jpg`,
-  `${import.meta.env.BASE_URL}images/hero3.jpg`,
-];
-
+  // استفاده از BASE_URL برای آدرس‌دهی درست در GitHub Pages
+  const images = [
+    `${import.meta.env.BASE_URL}images/hero1.jpg`,
+    `${import.meta.env.BASE_URL}images/hero2.jpg`,
+    `${import.meta.env.BASE_URL}images/hero3.jpg`,
+  ];
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -42,7 +39,6 @@ const heroImages = [
         backgroundRepeat: "no-repeat",
       }}
     >
-
       <button className="prev" onClick={prevSlide}>
         ❮
       </button>
