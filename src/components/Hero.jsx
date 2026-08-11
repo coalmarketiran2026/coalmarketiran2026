@@ -33,7 +33,7 @@ function Hero() {
       id="hero"
       className="hero"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url(${images[currentImage]})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)), url(${images[currentImage]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
