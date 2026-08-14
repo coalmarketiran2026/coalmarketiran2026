@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coalmarketiran2026.github.io/coalmarketiran2026/sitemap.xml
